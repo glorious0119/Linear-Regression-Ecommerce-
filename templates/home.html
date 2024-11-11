@@ -1,0 +1,22 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Yearly Amount Spent Prediction</h1>
+   
+        <!-- Main Input For Receiving Query to our ML -->
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+
+         <input type="text" name="avg_session_length" placeholder="Enter Avg. Session Length" required="required" /><br>
+         <input type="text" name="time_on_app" placeholder="Enter Time on App" required="required" /><br>
+         <input type="text" name="time_on_website" placeholder="Enter Time on Website" required="required" /><br>
+         <input type="text" name="length_of_membership" placeholder="Enter Length of Membership" required="required" /><br>
+   
+   
+   
+         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+    <h2>
+       The Yearly Amount Spent prediction is {{result}}
+    </h2>
+   <body>
+</html>
